@@ -18,20 +18,24 @@
 
 package com.example.background
 
+import java.util.*
+
 /**
  * Defines a list of constants used for [androidx.work.Worker] names, inputs & outputs.
  */
 object Constants {
-    // The name of the image manipulation work
-    const val IMAGE_MANIPULATION_WORK_NAME = "image_manipulation_work"
+    private val sRandom = Random()
+    val sAssetUris = arrayOf(
+        "http://ww1.sinaimg.cn/large/0065oQSqly1g2pquqlp0nj30n00yiq8u.jpg",
+        "https://ws1.sinaimg.cn/large/0065oQSqly1g0ajj4h6ndj30sg11xdmj.jpg",
+        "https://ws1.sinaimg.cn/large/0065oQSqly1fytdr77urlj30sg10najf.jpg",
+        "https://ws1.sinaimg.cn/large/0065oQSqly1fymj13tnjmj30r60zf79k.jpg",
+        "https://ws1.sinaimg.cn/large/0065oQSqgy1fy58bi1wlgj30sg10hguu.jpg",
+        "https://ws1.sinaimg.cn/large/0065oQSqgy1fxno2dvxusj30sf10nqcm.jpg"
+    )
 
-    // Other keys
-    const val OUTPUT_PATH = "demo_filter_outputs"
-    const val BASE_URL = "https://api.imgur.com/3/"
-    const val KEY_IMAGE_URI = "KEY_IMAGE_URI"
-
-    const val TAG_OUTPUT = "OUTPUT"
-
-    // Provide your own clientId to test Imgur uploads.
-    const val IMGUR_CLIENT_ID = ""
+    fun randomStockImage(): String {
+        val index = sRandom.nextInt(sAssetUris.size)
+        return sAssetUris[index]
+    }
 }

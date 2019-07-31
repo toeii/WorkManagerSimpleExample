@@ -1,0 +1,5 @@
+<resources>
+    <string name="image_count">%1$s/%2$s</string>
+    <string name="image_dialog_share">分享</string>
+    <string name="image_dialog_save">保存</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--图片浏览器属性-->
+    <declare-styleable name="ImagePreview">
+        <attr name="imageSingleSize" format="dimension" />
+        <attr name="imageSingleRatio" format="float" />
+        <attr name="imageGridSpacing" format="dimension" />
+        <attr name="imageMaxSize" format="integer" />
+        <attr name="imageAnimShow" format="boolean" />
+        <attr name="imageDisplayMode" format="enum">
+            <enum name="fill" value="0" />
+            <enum name="grid" value="1" />
+        </attr>
+        <attr name="imageSource" format="enum">
+            <enum name="pics" value="2" />
+            <enum name="view" value="3" />
+        </attr>
+    </declare-styleable>
+
+</resources>
