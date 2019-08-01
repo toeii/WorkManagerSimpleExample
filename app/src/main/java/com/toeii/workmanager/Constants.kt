@@ -16,8 +16,6 @@
  *
  */
 
-package com.example.background
-
 import java.util.*
 
 /**

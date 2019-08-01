@@ -1,7 +1,6 @@
 package com.toeii.workmanager
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,17 +10,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.work.*
 import com.bumptech.glide.Glide
-import com.example.background.Constants
 import androidx.core.app.ActivityCompat
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import com.pingrex.preview.ImagePreview
-import com.pingrex.preview.wrapper.ImageEntity
-import com.pingrex.preview.wrapper.ImagePreviewAdapter
-import kotlinx.android.synthetic.main.activity_main.*
-import java.io.File
 
 
 class MainActivity : AppCompatActivity() {
@@ -105,10 +98,10 @@ class MainActivity : AppCompatActivity() {
             if (it?.state!!.isFinished) {
                 if(liveData.value?.state == WorkInfo.State.SUCCEEDED){
                     //success
-                    println("liveData load success")
+                    println("download success")
                 }else{
                     //other
-                    println("liveData load error")
+                    println("download error")
                 }
             }
         })

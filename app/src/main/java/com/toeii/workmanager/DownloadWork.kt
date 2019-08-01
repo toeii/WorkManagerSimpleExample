@@ -23,7 +23,7 @@ class DownloadWork(var context: Context, private var workerParams: WorkerParamet
 
 
     override fun doWork(): Result {
-
+        //worker execute...
          var result = false
 
          context.runOnUiThread {
@@ -74,10 +74,7 @@ class DownloadWork(var context: Context, private var workerParams: WorkerParamet
 
     override fun onStopped() {
         super.onStopped()
-        //task stop ...
-
+        //worker task stop ...
     }
-
-
 
 }
